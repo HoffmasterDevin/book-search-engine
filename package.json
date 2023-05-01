@@ -1,23 +1,18 @@
 {
-  "name": "module10challenge",
+  "name": "googlebooks-app",
   "version": "1.0.0",
-  "description": "OOP and testing for Module 10 Challenge",
-  "main": "app.js",
-  "directories": {
-    "lib": "lib",
-    "test": "test"
-  },
+  "description": "",
+  "main": "server/server.js",
   "scripts": {
-    "test": "jest --verbose test/*",
-    "start": "node index.js",
-    "reset": "node reset.js"
+    "start": "node server/server.js",
+    "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
+    "install": "cd server && npm i && cd ../client && npm i",
+    "build": "cd client && npm run build"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "inquirer": "8.2.4"
-  },
   "devDependencies": {
-    "jest": "^24.8.0"
+    "concurrently": "^5.1.0"
   }
 }
